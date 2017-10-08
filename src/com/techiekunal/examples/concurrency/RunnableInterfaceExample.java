@@ -1,4 +1,4 @@
-package com.techiekunal.examples;
+package com.techiekunal.examples.concurrency;
 
 class RunnableImpl implements Runnable {
 

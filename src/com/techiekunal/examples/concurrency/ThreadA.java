@@ -1,4 +1,4 @@
-package com.techiekunal.examples;
+package com.techiekunal.examples.concurrency;
 
 public class ThreadA {
     public static void main(String[] args){

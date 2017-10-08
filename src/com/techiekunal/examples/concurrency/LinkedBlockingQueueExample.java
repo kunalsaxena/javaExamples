@@ -1,4 +1,4 @@
-package com.techiekunal.examples;
+package com.techiekunal.examples.concurrency;
 
 import java.util.UUID;
 import java.util.concurrent.BlockingQueue;

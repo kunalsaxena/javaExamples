@@ -137,8 +137,8 @@ public class DirectedGraphTraversal {
 		System.out.println(dgt.graphStorage);
 
 		// DFS Traversal
-		boolean isPathExistDFS = dgt.hasPathDFS(2, 3);
-		System.out.println(isPathExistDFS ? "Path Exists." : "Path does not exist.");
+		/*boolean isPathExistDFS = dgt.hasPathDFS(1, 4);
+		System.out.println(isPathExistDFS ? "Path Exists." : "Path does not exist.");*/
 
 		// BFS Traversal
 		boolean isPathExistBFS = dgt.hasPathBFS(2, 3);

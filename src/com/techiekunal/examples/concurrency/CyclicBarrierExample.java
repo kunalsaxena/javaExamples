@@ -1,4 +1,4 @@
-package com.techiekunal.examples;
+package com.techiekunal.examples.concurrency;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
