@@ -16,7 +16,7 @@ final class Dog {
 
 	@Override
 	public String toString() {
-		return name.toString() + address.toString();
+		return name + address;
 	}
 }
 
