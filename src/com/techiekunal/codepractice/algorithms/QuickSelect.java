@@ -4,8 +4,8 @@ public class QuickSelect {
 
 	public static void main(String[] args) {
 		
-		int[] arr = {2,5,8,6,7,11,3,1,9};
-		int selectedMin = quickSelect(arr, 0, arr.length-1, 3); // 4th min means - array index 3
+		int[] arr = {7,10,4,3,20,15};
+		int selectedMin = quickSelect(arr, 0, arr.length-1, 2); // 4th min means - array index 3
 		
 		System.out.println("After Selection");
 		
@@ -47,11 +47,6 @@ public class QuickSelect {
 		arr[pi] = arr[end];
 		arr[end] = temp;
 		
-		
-		for(int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
-		System.out.println(" ");
 		return pi;
 	}
 }
