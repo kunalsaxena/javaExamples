@@ -1,4 +1,4 @@
-package com.techiekunal.coding.interview;
+package com.techiekunal.coding.interview.array;
 
 import java.util.ArrayList;
 import java.util.Scanner;

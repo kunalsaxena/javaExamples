@@ -17,7 +17,7 @@ import java.util.Queue;
  * @author kunalsaxena
  *
  */
-public class GraphExample {
+public class GraphExample_Old {
 
 	// HashMap will store graph information
 	private HashMap<Integer, Node> nodeLookup = new HashMap<>();
@@ -158,19 +158,19 @@ public class GraphExample {
 
 	public static void main(String[] args) {
 		
-		GraphExample graphExample = new GraphExample();
+		GraphExample_Old graphExampleOld = new GraphExample_Old();
         // Creating graph shown in example
-		graphExample.createGraph();
+		graphExampleOld.createGraph();
 		
 		System.out.println("Printing Graph");
-		System.out.println(graphExample.nodeLookup);
+		System.out.println(graphExampleOld.nodeLookup);
 		
         // Traversing with DFS
 		/*boolean hasPathDFS = graphExample.hasPathDFS(3, 13);
 		System.out.println(hasPathDFS ? "Path Exist" : "Path does not exist.");*/
 		
         // Traversing with BFS
-		boolean hasPathBFS = graphExample.hasPathBFS(1, 21);
+		boolean hasPathBFS = graphExampleOld.hasPathBFS(1, 21);
 		System.out.println(hasPathBFS ? "Path Exist" : "Path does not exist.");
 		
 	}

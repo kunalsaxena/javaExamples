@@ -1,4 +1,4 @@
-package com.techiekunal.coding.interview;
+package com.techiekunal.coding.interview.array;
 
 /**
  * Clock-wise rotate array by given k
