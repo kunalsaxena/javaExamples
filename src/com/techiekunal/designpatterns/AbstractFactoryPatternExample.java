@@ -1,10 +1,10 @@
-package com.techiekunal.codepractice.designpatterns;
+package com.techiekunal.designpatterns;
 
 public class AbstractFactoryPatternExample {
 
 	public static void main(String[] args) {
 		IFactory factory = VehicleAbstractFactory.createFactory("BMW");
-		factory.createVehicle("TRUCK").construct();
+		factory.createVehicle("BIKE").construct();
 	}
 }
 

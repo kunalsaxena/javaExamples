@@ -1,5 +1,7 @@
 package com.techiekunal.codepractice.algorithms;
 
+import java.util.Arrays;
+
 public class HeapSort {
 
 	public static void main(String[] args) {
@@ -8,9 +10,7 @@ public class HeapSort {
 		heapSort(arr);
 		
 		System.out.println("After sorting");
-		for(int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
+		Arrays.toString(arr);
 	}
 	
 	private static void heapSort(int[] arr) {

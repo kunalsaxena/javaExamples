@@ -1,7 +1,7 @@
 package com.techiekunal.codepractice.algorithms;
 
 import java.util.Arrays;
-
+// Old Logic
 public class QuickSortExample {
 
 	public static void quicksort(int[] arr, int left, int right) {

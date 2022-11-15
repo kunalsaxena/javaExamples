@@ -38,8 +38,7 @@ class Solution {
 	            // move left
 	             return findwithBinarySearch(l, m-1, arr, k);
 	        }
-	        
-        } 
+        }
        	return -1;			
     }
 }

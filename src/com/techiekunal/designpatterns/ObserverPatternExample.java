@@ -1,4 +1,4 @@
-package com.techiekunal.codepractice.designpatterns;
+package com.techiekunal.designpatterns;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,7 +70,7 @@ class Iphone implements ObservableProduct {
 	}
 }
 
-interface Subscriber {
+interface Subscriber { //Observer
 	void update();
 }
 

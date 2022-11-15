@@ -20,22 +20,19 @@ public class SelectionSort {
 	
 	private static void selectionSort(int[] arr, int n) {
 		
-		for(int k = 0; k < n-1; k++) {
+		for(int i = 0; i < n-1; i++) {
 			
 			// find minimum element from array in Each pass
-			int min = k; // assume first element is min
-			for(int i = k + 1; i < n; i++) {
-				if(arr[i] < arr[min]) {
-					min = i;
+			int minIndex = i; // assume first element is min
+			for(int j = i + 1; j < n; j++) {
+				if(arr[j] < arr[minIndex]) {
+					minIndex = j;
 				}
 			}
-			
 			// swap min element (selected) with current index
-			int temp = arr[min];
-			arr[min] = arr[k];
-			arr[k] = temp;
+			int temp = arr[minIndex];
+			arr[minIndex] = arr[i];
+			arr[i] = temp;
 		}
-		
 	}
-	
 }

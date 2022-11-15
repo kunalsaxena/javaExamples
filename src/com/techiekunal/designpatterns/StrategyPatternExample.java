@@ -1,4 +1,4 @@
-package com.techiekunal.codepractice.designpatterns;
+package com.techiekunal.designpatterns;
 
 public class StrategyPatternExample {
 
@@ -17,9 +17,8 @@ public class StrategyPatternExample {
 	}
 }
 
-
 // context class
-class Context {
+class Context { // Navigator
 	
 	private RouteStrategy strategy;
 
@@ -33,7 +32,6 @@ class Context {
 	}
 	
 }
-
 
 interface RouteStrategy {
 	

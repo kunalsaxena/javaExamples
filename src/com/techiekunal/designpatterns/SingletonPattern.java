@@ -1,4 +1,4 @@
-package com.techiekunal.codepractice.designpatterns;
+package com.techiekunal.designpatterns;
 
 public final class SingletonPattern { // final preventing sub classing
 

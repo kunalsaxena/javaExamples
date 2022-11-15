@@ -1,4 +1,4 @@
-package com.techiekunal.codepractice.designpatterns;
+package com.techiekunal.designpatterns;
 
 // Client Class
 public class FactoryPatternExample {
@@ -29,7 +29,7 @@ class NotificationFactory {
 		}
 		return notification;
 	}
-	
+
 }
 
 

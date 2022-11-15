@@ -118,12 +118,7 @@ public class PrimsAlgoExample {
 	
 	
 	// Priority queue or min-heap to find connecting edge with min cost
-	private final PriorityQueue<Node> queue = new PriorityQueue<>(8,new Comparator<Node>() {
-		@Override
-		public int compare(Node o1, Node o2) {
-			return o1.key - o2.key; // natural order : ascending : minimum first
-		}
-	});
+	private final PriorityQueue<Node> queue = new PriorityQueue<>(8, Comparator.comparingInt(o -> o.key));
 
 	// store minimum spanning tree vertex
 	private final Set<Node> mst = new HashSet<>();

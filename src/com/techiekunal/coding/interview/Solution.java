@@ -43,5 +43,5 @@ public class Solution {
     public static void main(String[] args) {
 		System.out.println("Prime is -" + primeDigits(10));
 	}
-	
+
 }

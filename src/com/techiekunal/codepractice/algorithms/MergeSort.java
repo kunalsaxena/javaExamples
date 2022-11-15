@@ -1,5 +1,7 @@
 package com.techiekunal.codepractice.algorithms;
 
+import java.util.Arrays;
+
 public class MergeSort {
 
 	public static void main(String[] args) {
@@ -8,16 +10,12 @@ public class MergeSort {
 		int length = arr.length;
 		
 		System.out.println("Before sorting");
-		for(int i = 0; i < length; i++) {
-			System.out.print(arr[i] + " ");
-		}
+		System.out.println(Arrays.toString(arr));
 		
 		sort(arr, 0, arr.length-1);
 		
 		System.out.println("After sorting");
-		for(int i = 0; i < length; i++) {
-			System.out.print(arr[i] + " ");
-		}
+		System.out.println(Arrays.toString(arr));
 	}
 	
 	private static void sort(int[] arr, int p, int r) {

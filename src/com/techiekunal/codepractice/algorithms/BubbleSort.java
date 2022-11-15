@@ -24,7 +24,7 @@ public class BubbleSort {
 		
 		for(int k = 0; k < n; k++)  {
 
-			boolean isSwapped = false;
+			boolean isSwapped = false; // if no swap then array is already sorted
 			// Each Pass
 			for(int i=0; i < n-1-k; i++) { // -k is optimization
 				if(arr[i] > arr[i+1]) {
