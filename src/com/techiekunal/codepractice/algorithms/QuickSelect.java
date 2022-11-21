@@ -10,7 +10,6 @@ public class QuickSelect {
 		System.out.println("After Selection");
 		
 		System.out.print(selectedMin + " is the element ");
-		
 	}
 	
 	private static int quickSelect(int[] arr, int start, int end, int k) {

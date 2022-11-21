@@ -70,36 +70,6 @@ public class KruskalMSTExample {
 
         preProcessGraph(graph);
 
-        /*GraphNode n1 = new GraphNode(1);
-        GraphNode n2 = new GraphNode(2);
-        GraphNode n3 = new GraphNode(3);
-        GraphNode n4 = new GraphNode(4);
-
-        n1.edges.add(new Edge(1,2,5));
-        n1.edges.add(new Edge(1,4,4));
-
-        n2.edges.add(new Edge(2,1,5));
-        n2.edges.add(new Edge(2,4,2));
-        n2.edges.add(new Edge(2,3,3));
-
-        n3.edges.add(new Edge(3,2,3));
-        n3.edges.add(new Edge(3,4,6));
-
-        n4.edges.add(new Edge(4,3,6));
-        n4.edges.add(new Edge(4,2,2));
-        n4.edges.add(new Edge(4,1,4));
-
-        // populated Adj - better alternate
-        adj.put(n1.val, n1.edges);
-        adj.put(n2.val, n2.edges);
-        adj.put(n3.val, n3.edges);
-        adj.put(n4.val, n4.edges);
-
-        vertexMap.put(n1.val, n1);
-        vertexMap.put(n2.val, n2);
-        vertexMap.put(n3.val, n3);
-        vertexMap.put(n4.val, n4);*/
-
         KruskalMSTExample example = new KruskalMSTExample();
         List<Edge> mst = example.findKruskalMST();
         for(Edge e : mst) {
@@ -137,6 +107,14 @@ public class KruskalMSTExample {
     }
 
 }
+
+/**
+ * Funda ~~~>
+ * put all edges in min-heap priority queue of Edge
+ * poll edge and check if that edge will form cycle with MST<Edge>, if not add edge to MST
+ * return mst
+ */
+
 /** ## Complexity Analysis ##
  *  pre-processing - O(E)
  *  populatePriorityQueue - O(E logE)

@@ -20,7 +20,7 @@ import java.util.Map.Entry;
 public class PrimsAlgoExample {
 
 	// To store graph information
-	HashMap<Integer, Node> graphStorage = new HashMap<>();
+	HashMap<Integer, Node> graphStorage = new HashMap<>(); // list of all nodes <vertexVal , Node>
 
 	/**
 	 * Node is graph vertex, storing :- id : name of node key : it will help in
@@ -115,62 +115,6 @@ public class PrimsAlgoExample {
 		addEdge(6, 8, 15);
 	}
 
-	
-	
-	// Priority queue or min-heap to find connecting edge with min cost
-	private final PriorityQueue<Node> queue = new PriorityQueue<>(8, Comparator.comparingInt(o -> o.key));
-
-	// store minimum spanning tree vertex
-	private final Set<Node> mst = new HashSet<>();
-
-	// Add all vertices to queue :: later keep picking minimum
-	private void initQueue() {
-		Iterator<Node> itr = graphStorage.values().iterator();
-		while (itr.hasNext()) {
-			queue.add(itr.next());
-		}
-	}
-
-	// Update key info in queue(min heap) : set edge weight for next minimum cut
-	private void updateQueue(Node current) {
-
-		/**
-		 * Loop through all adjacent of currently removed vertex u and update in queue
-		 * if adjacent should not be in mst set current adjacent is v and weight(u,v) < v.key 
-		 * v.key initialized with infinite(max value of Integer)
-		 * Make greedy choice locally
-		 */
-		Iterator<Entry<Node, Integer>> itr = current.adjacentNodes.entrySet().iterator();
-		while (itr.hasNext()) {
-			Entry<Node, Integer> next = itr.next();
-			Node v = next.getKey();
-			if (!mst.contains(v)) {
-				int weight = next.getValue();
-				if (weight < v.key) {
-					v.key = weight;
-					// update this in queue
-					queue.remove(new Node(v.id));
-					queue.add(v);
-				}
-			}
-		}
-
-	}
-
-	private void findMSTPrims() {
-
-		// Loop for all vertices : until queue is empty
-		while (!queue.isEmpty()) {
-			Node u = queue.remove();
-
-			// Add this to mst set : this now is part of minimum spanning tree
-			mst.add(u);
-
-			// Update adjacent keys in queue
-			updateQueue(u);
-		}
-	}
-
 	public static void main(String[] args) {
 
 		PrimsAlgoExample pae = new PrimsAlgoExample();
@@ -188,6 +132,58 @@ public class PrimsAlgoExample {
 		// Print mst path
 		System.out.println("");
 		System.out.println(pae.mst);
+	}
+	
+	// Priority queue or min-heap to find connecting edge with min cost
+	private final PriorityQueue<Node> queue = new PriorityQueue<>(8, Comparator.comparingInt(o -> o.key));
+
+	// store minimum spanning tree vertex
+	private final Set<Node> mst = new HashSet<>();
+
+	// Add all vertices to queue :: later keep picking minimum
+	private void initQueue() {
+		Iterator<Node> itr = graphStorage.values().iterator();
+		while (itr.hasNext()) {
+			queue.add(itr.next());
+		}
+	}
+
+	private void findMSTPrims() {
+
+		// Loop for all vertices : until queue is empty
+		while (!queue.isEmpty()) {
+			Node u = queue.remove();
+
+			// Add this to mst set : this now is part of minimum spanning tree
+			mst.add(u);
+
+			updateQueue(u); // Update adjacent keys in queue
+		}
+	}
+
+	// Update key info in queue(min heap) : set edge weight for next minimum cut
+	private void updateQueue(Node current) {
+
+		/**
+		 * Loop through all adjacent of currently removed vertex u and update in qeueue
+		 * if adjacent should not be in mst set current adjacent is v and weight(u,v) < v.key
+		 * v.key initialized with infinite(max value of Integer)
+		 * Make greedy choice locally
+		 */
+		Iterator<Entry<Node, Integer>> itr = current.adjacentNodes.entrySet().iterator();
+		while (itr.hasNext()) {
+			Entry<Node, Integer> next = itr.next();
+			Node v = next.getKey();
+			if (!mst.contains(v)) {
+				int weight = next.getValue();
+				if (weight < v.key) {
+					v.key = weight;
+					// update this in queue
+					queue.remove(new Node(v.id));
+					queue.add(v);
+				}
+			}
+		}
 	}
 
 }

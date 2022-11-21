@@ -1,4 +1,4 @@
-package com.techiekunal.coding.interview.stringques;
+package com.techiekunal.coding.interview.string;
 
 import java.util.Scanner;
 

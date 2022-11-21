@@ -112,6 +112,7 @@ public class TreeTraversalExamples {
             // case 3 - 2 child
             else {
                 // preferring to replace with right child
+                // similar to BST - max element on left side or min element on right side can be root
                 TreeNode temp = findLeftMostOnRight(root.right);
                 root.data = temp.data;
                 root.right = deleteNode(temp.right, temp.data);

@@ -1,4 +1,4 @@
-package com.techiekunal.coding.interview.stringques;
+package com.techiekunal.coding.interview.string;
 
 import org.springframework.util.StopWatch;
 

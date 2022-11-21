@@ -1,4 +1,4 @@
-package com.techiekunal.coding.interview.treeques;
+package com.techiekunal.coding.interview.tree;
 
 import com.techiekunal.codepractice.datastructures.TreeNode;
 import com.techiekunal.codepractice.datastructures.TreeTraversalExamples;
